@@ -46,7 +46,5 @@ const http = require('http'),
     },
     server =  http.createServer(app);
 
-// Websocket proxy.
-proxy.ws(server);
 
 server.listen(process.env.PORT || config.port, () => console.log(`${config.ssl ? 'https://' : 'http://'}0.0.0.0:${config.port}`))
